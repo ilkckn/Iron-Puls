@@ -191,3 +191,13 @@ span {
 a {
   font-family: var(--font-body);
 }
+
+section.navbar {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+section.mobile-container .mobile-menu {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
