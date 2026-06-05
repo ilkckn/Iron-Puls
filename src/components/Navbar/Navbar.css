@@ -187,6 +187,9 @@
       background-color: rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
+      transform: translateZ(0);
+      will-change: transform;
+      isolation: isolate;
       padding-block: 5rem;
       position: relative;
       height: 100vh;
