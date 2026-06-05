@@ -9,8 +9,8 @@
   display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   transform: translateX(-50%);
   isolation: isolate;
   position: fixed;
@@ -183,8 +183,8 @@
 
     & > .mobile-menu {
       background-color: rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
       isolation: isolate;
       padding-block: 5rem;
       position: relative;
