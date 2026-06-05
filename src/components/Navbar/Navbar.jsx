@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -6,6 +7,23 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.innerHTML = `
+        .navbar {
+          backdrop-filter: blur(12px) !important;
+          -webkit-backdrop-filter: blur(12px) !important;
+        }
+
+        .mobile-container .mobile-menu {
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        }
+      `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
 
   const handleToggleMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,17 +36,20 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
       }
     };
 
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
-      <div className={`mobile-overlay ${isMenuOpen ? "visibility" : ""}`} onClick={handleClose}></div>
+      <div
+        className={`mobile-overlay ${isMenuOpen ? "visibility" : ""}`}
+        onClick={handleClose}
+      ></div>
       <section className="navbar">
         <div className="container">
           <div className="content">
