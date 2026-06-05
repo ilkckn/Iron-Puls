@@ -11,8 +11,7 @@
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transform: translateX(-50%) translateZ(0);
-  will-change: transform;
+  transform: translateX(-50%);
   isolation: isolate;
   position: fixed;
   top: 0;
