@@ -192,12 +192,12 @@ a {
   font-family: var(--font-body);
 }
 
-section.navbar {
+.navbar {
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
 }
 
-section.mobile-container .mobile-menu {
+.mobile-container .mobile-menu {
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
 }
