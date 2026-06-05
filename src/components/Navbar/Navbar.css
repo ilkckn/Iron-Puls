@@ -11,13 +11,12 @@
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transform: translateZ(0);
+  transform: translateX(-50%) translateZ(0);
   will-change: transform;
   isolation: isolate;
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 99;
 
   .container {
@@ -259,7 +258,7 @@
           font-size: 1.8rem;
           background-color: var(--primary-t60);
           border: none;
-          border-radius: .3rem;
+          border-radius: 0.3rem;
           padding-inline: 6rem;
           padding-block: 1rem;
           color: white;
@@ -284,16 +283,16 @@
           }
         }
       }
-      
+
       .links {
         ul li a {
           font-size: 1.6rem;
         }
       }
-      
+
       .join-burgerMenu {
         width: 75%;
-        
+
         & > button {
           font-size: 1.5rem;
           padding-inline: 4rem;
