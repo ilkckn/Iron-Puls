@@ -1,0 +1,43 @@
+.metrics {
+  width: 100%;
+  background-color: var(--secondary-t0);
+  padding-block: 4rem;
+
+  .container {
+    width: 100%;
+
+    .content-metrics {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .metric {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2.5rem;
+        border-left: 2px solid var(--secondary-t10);
+
+        & > p {
+          font-family: var(--font-heading);
+          font-size: 6rem;
+          font-weight: var(--fw-black);
+          font-style: italic;
+          letter-spacing: -.5px;
+          color: white;
+        }
+
+        & > span {
+          text-transform:uppercase ;
+          font-style: italic;
+          font-size: 1.45rem;
+          font-weight: var(--fw-bold);
+          letter-spacing: 2px;
+          color: var(--primary-t80);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navbar-height: 10rem;
+  --max-width: 1440px;
+  --gutter: clamp(1.6rem, 5vw, 5rem);
+
+  /* ── Fonts ── */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Mono", monospace;
+
+  /* ── Colors — Surface ── */
+  --surface: #131313;
+  --surface-dim: #131313;
+  --surface-bright: #3a3939;
+  --surface-container-lowest: #0e0e0e;
+  --surface-container-low: #1c1b1b;
+  --surface-container: #201f1f;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #353534;
+  --on-surface: #e5e2e1;
+  --on-surface-variant: #e4bfb1;
+  --inverse-surface: #e5e2e1;
+  --inverse-on-surface: #313030;
+
+  /* ── Colors — Outline ── */
+  --outline: #ab8a7d;
+  --outline-variant: #5b4137;
+  --surface-tint: #ffb599;
+
+  /* ── Colors — Primary (Electric Orange) ── */
+  --primary-t0: #000000;
+  --primary-t10: #370e00;
+  --primary-t20: #5a1c00;
+  --primary-t30: #7f2b00;
+  --primary-t40: #a63b00;
+  --primary-t50: #cf4c00;
+  --primary-t60: #fa5d00;
+  --primary-t70: #ff8c5c;
+  --primary-t80: #ffb599;
+  --primary-t90: #ffdbce;
+  --primary-t95: #ffede7;
+  --primary-t100: #ffffff;
+
+  /* ── Colors — Secondary ── */
+  --secondary-t0: #000000;
+  --secondary-t10: #1a1c1c;
+  --secondary-t20: #2f3131;
+  --secondary-t30: #2f3131;
+  --secondary-t40: #5d5f5f;
+  --secondary-t50: #767777;
+  --secondary-t60: #909191;
+  --secondary-t70: #aaabab;
+  --secondary-t80: #c6c6c7;
+  --secondary-t90: #e2e2e2;
+  --secondary-t95: #f0f1f1;
+  --secondary-t100: #ffffff;
+
+  /* ── Colors — Tertiary (Blue) ── */
+  --tertiary-t0: #000000;
+  --tertiary-t10: #001d36;
+  --tertiary-t20: #003258;
+  --tertiary-t30: #00497d;
+  --tertiary-t40: #0061a4;
+  --tertiary-t50: #007acd;
+  --tertiary-t60: #0095f7;
+  --tertiary-t70: #64afff;
+  --tertiary-t80: #9ecaff;
+  --tertiary-t90: #d1e4ff;
+  --tertiary-t95: #eaf1ff;
+  --tertiary-t100: #ffffff;
+
+  /* ── Colors — Neutral ── */
+  --neutral-t0: #000000;
+  --neutral-t10: #1c1b1b;
+  --neutral-t20: #313030;
+  --neutral-t30: #474646;
+  --neutral-t40: #5f5e5e;
+  --neutral-t50: #787776;
+  --neutral-t60: #929090;
+  --neutral-t70: #adabaa;
+  --neutral-t80: #c9c6c5;
+  --neutral-t90: #e5e2e1;
+  --neutral-t95: #f3f0ef;
+  --neutral-t100: #ffffff;
+
+  /* ── Colors — Base (Dark Neutral) ── */
+  --base-t0: #000000;
+  --base-t5: #080808;
+  --base-t10: #101010;
+  --base-t15: #181818;
+  --base-t20: #202020;
+  --base-t30: #303030;
+  --base-t40: #404040;
+  --base-t50: #515151;
+  --base-t60: #636363;
+  --base-t70: #7a7a7a;
+  --base-t80: #969696;
+  --base-t90: #b8b8b8;
+  --base-t95: #d4d4d4;
+  --base-t99: #f5f5f5;
+  --base-t100: #ffffff;
+
+  /* ── Colors — Background ── */
+  --background: #131313;
+  --on-background: #e5e2e1;
+  --surface-variant: #353534;
+
+  /* ── Glass Effect ── */
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-blur: blur(32px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* ── Glow ── */
+  --glow-orange-sm: 0 0 20px rgba(255, 95, 0, 0.15);
+  --glow-orange-md: 0 0 40px rgba(255, 95, 0, 0.2);
+  --glow-orange-lg: 0 0 80px rgba(255, 95, 0, 0.25);
+
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: var(--secondary-t10);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+span {
+  font-family: var(--font-label);
+}
+
+a {
+  font-family: var(--font-body);
+}
