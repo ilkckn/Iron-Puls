@@ -51,10 +51,10 @@ Make sure you have the following installed:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/iron-pulse.git
+git clone https://github.com/your-username/Iron-Pulse.git
 
 # 2. Navigate into the project
-cd iron-pulse
+cd IronPulse
 
 # 3. Install dependencies
 npm install
