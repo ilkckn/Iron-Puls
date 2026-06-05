@@ -125,10 +125,10 @@
           letter-spacing: -0.5px;
           word-spacing: -4px;
           cursor: pointer;
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 
           &:hover {
-            transform: translateY(.2rem);
+            transform: translateY(0.2rem);
           }
         }
       }
@@ -142,8 +142,10 @@
     position: fixed;
     inset: 0;
     opacity: 0;
+    pointer-events: none;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 98;
+    transition: opacity 0.3s ease-in-out;
 
     &.visibility {
       opacity: 1;
@@ -232,7 +234,7 @@
 
             a {
               text-decoration: none;
-              font-size: 1.7rem;
+              font-size: 1.9rem;
               font-weight: var(--fw-regular);
               color: white;
             }
@@ -241,20 +243,94 @@
       }
 
       .join-burgerMenu {
-        width: 70%;
+        width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 6rem;
 
         & > button {
+          font-size: 1.8rem;
           background-color: var(--primary-t60);
           border: none;
-          border-radius: 1rem;
-          padding-inline: 4rem;
-          padding-block: 0.7rem;
+          border-radius: .3rem;
+          padding-inline: 6rem;
+          padding-block: 1rem;
           color: white;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-container {
+    .mobile-menu {
+      .logo {
+        width: 11rem;
+
+        & > p {
+          font-size: 1.5rem;
+
+          & > span {
+            font-size: 1.7rem;
+          }
+        }
+      }
+      
+      .links {
+        ul li a {
+          font-size: 1.6rem;
+        }
+      }
+      
+      .join-burgerMenu {
+        width: 75%;
+        
+        & > button {
+          font-size: 1.5rem;
+          padding-inline: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .mobile-container {
+    width: 50vw;
+
+    .mobile-menu {
+      .logo {
+        width: 10rem;
+
+        & > p {
+          font-size: 1.5rem;
+
+          & > span {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      .links {
+        ul {
+          gap: 1.5rem;
+
+          li {
+            a {
+              font-size: 1.45rem;
+            }
+          }
+        }
+      }
+
+      .join-burgerMenu {
+        margin-top: 3rem;
+        & > button {
+          border-radius: 0.5rem;
+          padding-inline: 3rem;
         }
       }
     }

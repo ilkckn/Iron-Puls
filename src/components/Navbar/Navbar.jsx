@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="mobile-overlay" onClick={handleClose}></div>
+      <div className={`mobile-overlay ${isMenuOpen ? "visibility" : ""}`} onClick={handleClose}></div>
       <section className="navbar">
         <div className="container">
           <div className="content">

@@ -24,13 +24,13 @@
         margin-top: 1.5rem;
         display: flex;
         align-items: center;
-        gap: .5rem;
+        gap: 0.5rem;
 
         & > p {
           flex: 1;
           font-size: 1.8rem;
           font-weight: var(--fw-thin);
-          letter-spacing: .5px;
+          letter-spacing: 0.5px;
           line-height: 2.8rem;
           color: var(--primary-t90);
         }
@@ -39,7 +39,7 @@
           display: inline-block;
           flex: 1;
           width: 100%;
-          height: .1rem;
+          height: 0.1rem;
           background-color: var(--secondary-t50);
         }
       }
@@ -60,7 +60,7 @@
         border: 1px solid var(--secondary-t30);
         padding-inline: 5rem;
         padding-block: 5rem;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
           border-color: var(--primary-t80);
@@ -68,8 +68,10 @@
         }
 
         & > img {
-          width: 10rem;
-          height: 10rem;
+          width: 8rem;
+          height: 8rem;
+          border-radius: 0.5rem;
+          margin-bottom: 1rem;
         }
 
         & > h2 {
@@ -85,7 +87,8 @@
         & > p {
           font-size: 1.8rem;
           font-weight: var(--fw-regular);
-          letter-spacing: .5px;
+          line-height: 2.7rem;
+          letter-spacing: 0.5px;
           color: var(--primary-t90);
         }
 
@@ -94,13 +97,143 @@
           margin-top: 2rem;
           display: flex;
           flex-direction: column;
-          gap: .5rem;
+          gap: 0.5rem;
 
           li {
             font-family: var(--font-label);
             font-size: 1.6rem;
             text-decoration: none;
             color: var(--primary-t80);
+          }
+        }
+      }
+    }
+  }
+}
+/* =============================================
+   RESPONSIVE — Services
+   1024px : tablet (2 kolon)
+   768px  : tablet küçük (1 kolon)
+   480px  : mobil
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .services-container {
+    padding-block: 6rem;
+
+    .container {
+      .header {
+        & > h1 {
+          font-size: 4rem;
+        }
+        .par-line {
+          flex-direction: column;
+          align-items: flex-start;
+          & > span {
+            width: 100%;
+          }
+        }
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+
+        .box {
+          padding-inline: 4rem;
+          padding-block: 4rem;
+
+          & > p {
+            line-height: 2.7rem;
+          }
+        }
+
+        & > *:last-child:nth-child(odd) {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding-block: 5rem;
+
+    .container {
+      .header {
+        & > h1 {
+          font-size: 3.5rem;
+        }
+        .par-line {
+          & > p {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
+
+        .box {
+          padding-inline: 3.5rem;
+          padding-block: 3.5rem;
+
+          & > h2 {
+            font-size: 2rem;
+          }
+          & > p {
+            font-size: 1.7rem;
+          }
+          & > ul li {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding-block: 4rem;
+
+    .container {
+      .header {
+        & > h1 {
+          font-size: 3rem;
+        }
+        .par-line {
+          & > p {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+
+      .services {
+        gap: 1.5rem;
+
+        .box {
+          padding-inline: 2.5rem;
+          padding-block: 3rem;
+
+          & > img {
+            width: 7rem;
+            height: 7rem;
+          }
+          & > h2 {
+            font-size: 1.9rem;
+          }
+          & > p {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+          }
+          & > ul {
+            margin-left: 1.5rem;
+            li {
+              font-size: 1.4rem;
+            }
           }
         }
       }

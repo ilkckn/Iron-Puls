@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 import Metrics from "./Metrics";
 import Services from "./Services";
 import UserFeedback from "./UserFeedback";
+import JoinPuls from "./JoinPuls";
 
 const Landing = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="landing">
       <div className="hero">
@@ -24,7 +28,7 @@ const Landing = () => {
             </p>
           </div>
           <div className="btns">
-            <button>start training</button>
+            <button onClick={() => navigate("/about")}>start training</button>
             <button>view plans</button>
           </div>
         </div>
@@ -38,6 +42,9 @@ const Landing = () => {
       </div>
       <div className="user-feedback-component">
         <UserFeedback />
+      </div>
+      <div className="join-component">
+        <JoinPuls />
       </div>
     </section>
   );

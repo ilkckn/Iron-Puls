@@ -2,6 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Landing from "./pages/Landing/Landing";
+import Footer from "./components/Footer/Footer";
 
 const ComponentName = () => {
   return (
@@ -12,6 +13,7 @@ const ComponentName = () => {
           <Route path="/" element={<Landing />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 };

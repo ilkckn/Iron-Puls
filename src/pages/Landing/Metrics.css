@@ -25,17 +25,74 @@
           font-size: 6rem;
           font-weight: var(--fw-black);
           font-style: italic;
-          letter-spacing: -.5px;
+          letter-spacing: -0.5px;
           color: white;
         }
 
         & > span {
-          text-transform:uppercase ;
+          text-transform: uppercase;
           font-style: italic;
           font-size: 1.45rem;
           font-weight: var(--fw-bold);
           letter-spacing: 2px;
           color: var(--primary-t80);
+        }
+      }
+    }
+  }
+}
+/* =============================================
+   RESPONSIVE — Metrics
+   768px : tablet (2x2 grid)
+   480px : mobil (tek kolon)
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .metrics {
+    padding-block: 4rem;
+
+    .container {
+      padding-inline: 6rem;
+      .content-metrics {
+        /*display: grid;
+        grid-template-columns: repeat(2, 1fr);*/
+        gap: 2rem;
+
+        .metric {
+          padding-left: 2rem;
+
+          & > p {
+            font-size: 4rem;
+          }
+          & > span {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .metrics {
+    padding-block: 3rem;
+
+    .container {
+      .content-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        .metric {
+          padding-left: 1.5rem;
+
+          & > p {
+            font-size: 3.5rem;
+          }
+          & > span {
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+          }
         }
       }
     }
