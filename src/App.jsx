@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Landing from "./pages/Landing/Landing";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
+import Programs from "./pages/Programs/Programs";
 
 const ComponentName = () => {
   return (
@@ -13,6 +14,7 @@ const ComponentName = () => {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
         </Routes>
       </main>
       <Footer />

@@ -1,0 +1,128 @@
+.protocol-container {
+  width: 100%;
+  min-height: 40dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--secondary-t30);
+  padding-inline: 4rem;
+  padding-block: 4rem;
+
+  .image {
+    max-width: 100%;
+    height: 60rem;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .protocol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-inline: 6rem;
+
+    & > span {
+      margin-bottom: 1.5rem;
+      padding-inline: 2rem;
+      padding-block: 0.5rem;
+      width: fit-content;
+      color: var(--primary-t60);
+      background-color: var(--primary-t10);
+      font-size: 1.7rem;
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+    }
+
+    .main-header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > h1 {
+        color: white;
+        font-size: 8rem;
+        font-weight: var(--fw-black);
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 8rem;
+      }
+    }
+
+    .duration-intensity-focus {
+      width: 100%;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+
+      .duration,
+      .intensity,
+      .focus {
+        display: flex;
+        flex-direction: column;
+
+        & > span {
+          color: var(--primary-t90);
+          font-size: 1.35rem;
+          font-weight: var(--fw-semibold);
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+        }
+
+        & > p {
+          font-size: 1.65rem;
+          font-weight: var(--fw-extrabold);
+          font-style: italic;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .sequence {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .image {
+        width: 6rem;
+        height: 6rem;
+
+        & > img {
+          width: 100%;
+        }
+      }
+
+      & > p {
+        width: 80%;
+        line-height: 3rem;
+        font-size: 1.8rem;
+        color: var(--primary-t90);
+      }
+    }
+
+    .btn {
+      margin-top: 5rem;
+      width: 100%;
+
+      & > button {
+        padding-inline: 10rem;
+        padding-block: 1.5rem;
+        font-size: 1.6rem;
+        font-weight: var(--fw-semibold);
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: .2rem;
+        background-color: var(--primary-t60);
+        color: white;
+      }
+    }
+  }
+}

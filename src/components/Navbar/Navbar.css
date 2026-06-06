@@ -26,8 +26,23 @@
       justify-content: space-between;
 
       .logo {
-        width: 9rem;
+        width: 20rem;
         cursor: pointer;
+
+        & > p {
+          display: inline-flex;
+          align-items: center;
+          gap: .6rem;
+          font-size: 2rem;
+          font-weight: var(--fw-black);
+          font-style: italic;
+          text-transform: uppercase;
+          color: var(--secondary-t90);
+
+          & > svg {
+            color: var(--primary-t60);
+          }
+        }
 
         img {
           width: 100%;

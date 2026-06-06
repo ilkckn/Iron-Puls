@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoFlash } from "react-icons/io5";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,7 +104,11 @@ const Navbar = () => {
                 navigate("/");
               }}
             >
-              <img src="/logo/logo1.png" alt="" />
+              <p>
+                <IoFlash />
+                iron pulse
+              </p>
+              {/* <img src="/logo/logo1.png" alt="" />*/}
             </div>
             <div className="links">
               <ul>
