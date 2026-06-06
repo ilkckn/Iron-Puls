@@ -8,6 +8,51 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const menu = document.querySelector(".mobile-menu");
+    if (!menu) return;
+
+    const focusableElements = menu.querySelectorAll(
+      'a, button, input, [tabindex]:not([tabindex="-1"])',
+    );
+    const firstEl = focusableElements[0];
+    const lastEl = focusableElements[focusableElements.length - 1];
+
+    const handleTab = (e) => {
+      if (e.key !== "Tab") return;
+
+      if (e.shiftKey) {
+        // Shift+Tab: ilk elementteyse sona atla
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        // Tab: son elementteyse başa atla
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleTab);
+    firstEl?.focus(); // menü açılınca ilk elemana odaklan
+
+    return () => document.removeEventListener("keydown", handleTab);
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    const main = document.querySelector("main");
+    const footer = document.querySelector(".footer-container");
+    const navbar = document.querySelector(".navbar");
+    if (main) main.inert = isMenuOpen;
+    if (footer) footer.inert = isMenuOpen;
+    if (navbar) navbar.inert = isMenuOpen;
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `
         .navbar {
@@ -92,7 +137,7 @@ const Navbar = () => {
             <div className="logo">
               <img src="/logo/logo1.png" alt="" />
               <p>
-                <span>I</span>ron <span>P</span>uls
+                <span>I</span>ron <span>P</span>ulse
               </p>
             </div>
             <div className="links">

@@ -136,6 +136,14 @@
 }
 
 @media (max-width: 1024px) {
+  .navbar {
+    .container {
+      .content {
+        padding: 0;
+        padding-right: 2rem;
+      }
+    }
+  }
   .mobile-overlay {
     display: block;
     position: fixed;
@@ -263,6 +271,14 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    .container {
+      .content {
+        padding: 0;
+        padding-right: 2rem;
+      }
+    }
+  }
   .mobile-container {
     .mobile-menu {
       .logo {
@@ -296,6 +312,18 @@
 }
 
 @media (max-width: 430px) {
+  .navbar {
+    .container {
+      .content {
+        padding: 0;
+        padding-right: 1.5rem;
+
+        .logo {
+          width: 7.5rem;
+        }
+      }
+    }
+  }
   .mobile-container {
     width: 50vw;
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 *,
 *::before,
@@ -17,6 +17,7 @@
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-label: "Space Mono", monospace;
+  --font-number: "Plus Jakarta Sans", sans-serif;
 
   /* ── Colors — Surface ── */
   --surface: #131313;
@@ -141,7 +142,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background: var(--secondary-t10);
