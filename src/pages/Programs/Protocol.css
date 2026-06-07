@@ -5,7 +5,8 @@
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--secondary-t30);
   padding-inline: 4rem;
-  padding-block: 4rem;
+  padding-block: 6rem;
+  background-color: var(--base-t10);
 
   .image {
     max-width: 100%;
@@ -116,12 +117,254 @@
         padding-block: 1.5rem;
         font-size: 1.6rem;
         font-weight: var(--fw-semibold);
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
         text-transform: uppercase;
         border: none;
-        border-radius: .2rem;
+        border-radius: 0.2rem;
         background-color: var(--primary-t60);
         color: white;
+      }
+    }
+  }
+}
+
+/* =============================================
+   RESPONSIVE — Protocol
+   1024px | 820px | 768px | 430px
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .protocol-container {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 3rem;
+    padding-block: 5rem;
+    gap: 2rem;
+
+    .image {
+      height: 50rem;
+    }
+
+    .protocol {
+      padding-inline: 3rem;
+
+      & > span {
+        font-size: 1.5rem;
+      }
+
+      .main-header {
+        & > h1 {
+          font-size: 6rem;
+          line-height: 6.5rem;
+        }
+      }
+
+      .duration-intensity-focus {
+        gap: 3rem;
+
+        .duration,
+        .intensity,
+        .focus {
+          & > span {
+            font-size: 1.2rem;
+          }
+          & > p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .sequence {
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+        }
+      }
+
+      .btn {
+        margin-top: 3.5rem;
+
+        & > button {
+          padding-inline: 6rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .protocol-container {
+    grid-template-columns: 1fr;
+    padding-inline: 3rem;
+    padding-block: 4rem;
+
+    .image {
+      height: 40rem;
+      max-width: 100%;
+    }
+
+    .protocol {
+      padding-inline: 0;
+      padding-top: 3rem;
+
+      .main-header {
+        & > h1 {
+          font-size: 6rem;
+          line-height: 6.5rem;
+        }
+      }
+
+      .btn {
+        & > button {
+          width: 100%;
+          padding-inline: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .protocol-container {
+    padding-inline: 2.5rem;
+    padding-block: 3.5rem;
+
+    .image {
+      height: 35rem;
+    }
+
+    .protocol {
+      .main-header {
+        & > h1 {
+          font-size: 5.5rem;
+          line-height: 6rem;
+        }
+      }
+
+      .duration-intensity-focus {
+        gap: 2.5rem;
+        flex-wrap: wrap;
+      }
+
+      .sequence {
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.5rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .protocol-container {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    gap: 0;
+
+    .image {
+      height: 28rem;
+    }
+
+    .protocol {
+      padding-inline: 0;
+      padding-top: 2.5rem;
+
+      & > span {
+        font-size: 1.3rem;
+        padding-inline: 1.5rem;
+        padding-block: 0.4rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .main-header {
+        & > h1 {
+          font-size: 4.5rem;
+          line-height: 5rem;
+          letter-spacing: -1px;
+        }
+      }
+
+      .duration-intensity-focus {
+        gap: 2rem;
+        margin-top: 1.2rem;
+        flex-wrap: wrap;
+
+        .duration,
+        .intensity,
+        .focus {
+          & > span {
+            font-size: 1.2rem;
+          }
+          & > p {
+            font-size: 1.55rem;
+          }
+        }
+      }
+
+      .sequence {
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+
+        .image {
+          width: 5rem;
+          height: 5rem;
+          min-width: 5rem;
+        }
+
+        & > p {
+          width: 100%;
+          font-size: 1.55rem;
+          line-height: 2.4rem;
+        }
+      }
+
+      .btn {
+        margin-top: 2.5rem;
+
+        & > button {
+          width: 100%;
+          padding-inline: 2rem;
+          padding-block: 1.8rem;
+          font-size: 1.55rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .protocol-container {
+    .image {
+      width: 35rem;
+      height: 25rem;
+    }
+
+    .protocol {
+      .main-header {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .protocol-container {
+    .image {
+      width: 33.3rem;
+      height: 20rem;
+    }
+
+    .protocol {
+      .main-header {
+        h1 {
+          font-size: 4rem;
+        }
       }
     }
   }

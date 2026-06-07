@@ -1,0 +1,523 @@
+.pillars-container {
+  width: 100%;
+  min-height: 30dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-t0);
+  padding-inline: 4rem;
+  padding-block: 4rem;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at 100% 100%,
+      rgba(255, 100, 0, 0.1) 0%,
+      transparent 75%
+    );
+    z-index: 0;
+  }
+
+  .header {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    & > h1 {
+      flex: 2;
+      font-size: 5rem;
+      font-weight: var(--fw-black);
+      font-style: italic;
+      letter-spacing: -5px;
+      text-transform: uppercase;
+      color: var(--secondary-t90);
+    }
+
+    & > span {
+      flex: 6;
+      width: 100%;
+      height: 0.2rem;
+      background-color: var(--secondary-t30);
+    }
+  }
+
+  .boxes {
+    margin-top: 5rem;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+
+    .box {
+      border: 1px solid var(--secondary-t30);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding-inline: 4rem;
+      padding-block: 4rem;
+      padding-top: 20rem;
+      position: relative;
+      transition: all 1.3s ease-in-out;
+      cursor: pointer;
+
+      & > h1 {
+        font-size: 4rem;
+        font-weight: var(--fw-black);
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        color: var(--secondary-t90);
+      }
+
+      & > p {
+        font-size: 1.7rem;
+        font-weight: var(--fw-thin);
+        letter-spacing: 1px;
+        line-height: 2.5rem;
+        color: var(--primary-t90);
+      }
+
+      & > button {
+        margin-top: 2rem;
+        position: relative;
+        border-bottom: none; /* eskiyi kaldır */
+        background-color: transparent;
+        color: var(--primary-t60);
+        border: none;
+        font-size: 1.4rem;
+        font-style: italic;
+        text-transform: uppercase;
+        width: fit-content;
+        padding-bottom: 0.5rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0rem;
+          left: 0;
+          width: 100%; /* başlangıçta 0 */
+          height: 1px;
+          background-color: var(--primary-t60);
+          transition: width 0.3s ease-in-out;
+        }
+
+        & p {
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      &:hover button::after {
+        width: calc(100% + 1.5rem);
+      }
+
+      & > button p {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover button p {
+        transform: translateX(1.5rem); /* 1.5re → 1.5rem */
+      }
+
+      & > span {
+        font-family: var(--font-number);
+        font-size: 2.5rem;
+        font-weight: var(--fw-black);
+        font-style: italic;
+        color: var(--secondary-t60);
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        opacity: 0; /* display: none yerine */
+        visibility: hidden; /* display: none yerine */
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover span {
+        opacity: 1; /* display: block yerine */
+        visibility: visible; /* display: block yerine */
+      }
+    }
+
+    .box:nth-child(2) {
+      background-color: var(--primary-t60);
+      border-color: var(--primary-t60);
+
+      & > h1 {
+        color: var(--secondary-t0);
+      }
+
+      & > p {
+        color: var(--secondary-t0);
+        font-weight: var(--fw-regular);
+      }
+
+      & > button {
+        margin-top: 2rem;
+        position: relative;
+        border-bottom: none; /* eskiyi kaldır */
+        background-color: transparent;
+        color: var(--primary-t0);
+        border: none;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: var(--fw-semibold);
+        text-transform: uppercase;
+        width: fit-content;
+        padding-bottom: 0.5rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0rem;
+          left: 0;
+          width: 100%; /* başlangıçta 0 */
+          height: 1px;
+          background-color: var(--primary-t0);
+          transition: width 0.3s ease-in-out;
+        }
+
+        & p {
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      &:hover button::after {
+        width: calc(100% + 1.5rem);
+      }
+
+      & > button p {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover button p {
+        transform: translateX(1.5rem); /* 1.5re → 1.5rem */
+      }
+
+      & > span {
+        color: var(--secondary-t0);
+      }
+    }
+
+    .box:nth-child(3) {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-block: 8rem;
+      background-color: rgba(255, 90, 0, 0.07);
+
+      .left {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+
+        & > h1 {
+          font-size: 4rem;
+          font-weight: var(--fw-black);
+          letter-spacing: -2px;
+          text-transform: uppercase;
+          color: var(--secondary-t90);
+        }
+
+        & > p {
+          margin-top: 1.5rem;
+          width: 65%;
+          font-size: 1.7rem;
+          font-weight: var(--fw-thin);
+          letter-spacing: 1px;
+          line-height: 2.5rem;
+          color: var(--primary-t90);
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+
+        & > button {
+          border-radius: 0.2rem;
+          background-color: var(--primary-t100);
+          border: none;
+          padding-inline: 5rem;
+          padding-block: 1.5rem;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          color: var(--secondary-t0);
+          font-size: 1.7rem;
+          font-weight: var(--fw-black);
+          font-style: italic;
+          letter-spacing: -0.5px;
+          text-transform: uppercase;
+
+          &:hover {
+            transform: scale(1.06);
+          }
+        }
+      }
+
+      & > span {
+        color: var(--primary-t90);
+      }
+    }
+  }
+}
+
+/* =============================================
+   RESPONSIVE — Pillars
+   1024px | 820px | 768px | 430px
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .pillars-container {
+    padding-inline: 3.5rem;
+    padding-block: 3.5rem;
+
+    .header {
+      & > h1 {
+        font-size: 4rem;
+        letter-spacing: -3px;
+      }
+    }
+
+    .boxes {
+      margin-top: 4rem;
+      gap: 1.5rem;
+
+      .box {
+        padding-inline: 3rem;
+        padding-block: 3rem;
+        padding-top: 15rem;
+
+        & > h1 {
+          font-size: 3.2rem;
+          letter-spacing: -1px;
+        }
+
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+      }
+
+      .box:nth-child(3) {
+        padding-block: 5rem;
+
+        .left {
+          & > h1 {
+            font-size: 3.2rem;
+          }
+          & > p {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            width: 80%;
+          }
+        }
+
+        .right > button {
+          padding-inline: 3.5rem;
+          padding-block: 1.3rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .pillars-container {
+    padding-inline: 3rem;
+
+    .header {
+      & > h1 {
+        font-size: 3.5rem;
+        letter-spacing: -2px;
+      }
+    }
+
+    .boxes {
+      grid-template-columns: 1fr;
+      margin-top: 3rem;
+
+      .box {
+        padding-top: 12rem;
+        padding-inline: 3rem;
+        padding-block: 3rem;
+
+        & > h1 {
+          font-size: 3rem;
+        }
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+      }
+
+      .box:nth-child(2) {
+        grid-column: auto;
+      }
+
+      .box:nth-child(3) {
+        grid-column: 1 / -1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 4rem;
+        gap: 2rem;
+
+        .left {
+          & > h1 {
+            font-size: 3rem;
+          }
+          & > p {
+            width: 100%;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+          }
+        }
+
+        .right > button {
+          padding-inline: 4rem;
+          padding-block: 1.5rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pillars-container {
+    padding-inline: 2.5rem;
+    padding-block: 3rem;
+
+    .header {
+      & > h1 {
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+      }
+    }
+
+    .boxes {
+      grid-template-columns: 1fr;
+
+      .box {
+        padding-top: 10rem;
+        padding-inline: 2.5rem;
+        padding-block: 2.5rem;
+
+        & > h1 {
+          font-size: 2.8rem;
+        }
+        & > p {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+      }
+
+      .box:nth-child(3) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 3.5rem;
+        gap: 2rem;
+
+        .left > p {
+          width: 100%;
+        }
+
+        .right > button {
+          width: 100%;
+          padding-inline: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .pillars-container {
+    padding-inline: 2rem;
+    padding-block: 2.5rem;
+
+    .header {
+      & > h1 {
+        font-size: 3rem;
+        letter-spacing: -1.5px;
+        flex: 1;
+      }
+
+      & > span {
+        flex: 2;
+      }
+    }
+
+    .boxes {
+      grid-template-columns: 1fr;
+      margin-top: 2.5rem;
+      gap: 1.2rem;
+
+      .box {
+        padding-top: 8rem;
+        padding-inline: 2rem;
+        padding-block: 2rem;
+
+        & > h1 {
+          font-size: 2.8rem;
+          letter-spacing: -1px;
+        }
+
+        & > p {
+          font-size: 1.55rem;
+          line-height: 2.4rem;
+        }
+
+        & > button {
+          font-size: 1.3rem;
+          margin-top: 1.5rem;
+        }
+
+        & > span {
+          font-size: 2rem;
+          top: 2rem;
+          right: 2rem;
+        }
+      }
+
+      .box:nth-child(3) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 3rem;
+        padding-inline: 2rem;
+        gap: 2rem;
+
+        .left {
+          & > h1 {
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+          }
+
+          & > p {
+            width: 100%;
+            font-size: 1.55rem;
+            line-height: 2.4rem;
+            margin-top: 1rem;
+          }
+        }
+
+        .right {
+          width: 100%;
+
+          & > button {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1.8rem;
+            font-size: 1.55rem;
+          }
+        }
+      }
+    }
+  }
+}
