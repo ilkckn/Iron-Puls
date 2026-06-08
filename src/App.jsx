@@ -6,10 +6,12 @@ import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
 import Programs from "./pages/Programs/Programs";
 import Coaches from "./pages/Coaches/Coaches";
+import ScrollToTop from "./components/ScrollToTop";
 
 const ComponentName = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>

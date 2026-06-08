@@ -9,6 +9,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0, "smooth");
+  }, []);
+
+  useEffect(() => {
     if (!isMenuOpen) return;
 
     const menu = document.querySelector(".mobile-menu");
@@ -76,6 +80,7 @@ const Navbar = () => {
 
   const handleClose = () => {
     setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -113,19 +118,47 @@ const Navbar = () => {
             <div className="links">
               <ul>
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink
+                    to="/"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about">About</NavLink>
+                  <NavLink
+                    to="/about"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    About
+                  </NavLink>
                 </li>
                 <li>
                   <NavLink to="/programs">Programs</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/coaches">Coaches</NavLink>
+                  <NavLink
+                    to="/coaches"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    Coaches
+                  </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/locations">Locations</NavLink>
+                  <NavLink
+                    to="/locations"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    Locations
+                  </NavLink>
                 </li>
               </ul>
             </div>
