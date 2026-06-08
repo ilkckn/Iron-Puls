@@ -5,7 +5,7 @@ const Coach = () => {
   return (
     <section className="coach-container">
       <div className="image">
-        <img src="/coaches/coach.png" alt="" />
+        <img src="/coaches/coach1.png" alt="" />
       </div>
       <div className="infos">
         <h1>marcus vaughn</h1>
