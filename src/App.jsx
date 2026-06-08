@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Programs from "./pages/Programs/Programs";
 import Coaches from "./pages/Coaches/Coaches";
 import ScrollToTop from "./components/ScrollToTop";
+import TheVaults from "./pages/TheVaults/TheVaults";
 
 const ComponentName = () => {
   return (
@@ -19,6 +20,7 @@ const ComponentName = () => {
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/coaches" element={<Coaches />} />
+          <Route path="/the-vaults" element={<TheVaults />} />
         </Routes>
       </main>
       <Footer />

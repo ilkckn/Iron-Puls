@@ -1,0 +1,98 @@
+.the-vaults-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  min-height: 100dvh;
+  background-color: var(--surface-container-lowest);
+
+  .hero {
+    width: 100%;
+    min-height: 60dvh;
+    padding-inline: 4rem;
+    padding-block: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("/the-vaults/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at 240% 300%,
+        rgba(249, 115, 22, 0.1) 10%,
+        rgba(249, 115, 22, 0.4) 50%,
+        transparent 70%
+      );
+      z-index: 3;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0,0,0,0.1) 100%) ;
+      z-index: 1;
+    }
+
+    & > span {
+      z-index: 3;
+      font-size: 1.4rem;
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-t90);
+      margin-bottom: 2rem;
+    }
+
+    .main-header {
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      & > h1 {
+        font-size: 8rem;
+        font-weight: var(--fw-black);
+        font-style: italic;
+        letter-spacing: -2px;
+        line-height: 6.5rem;
+        text-transform: uppercase;
+        color: var(--secondary-t90);
+      }
+
+      & > h1:nth-child(2) {
+        color: var(--primary-t60);
+      }
+    }
+
+    .paragraphs {
+      margin-top: 2rem;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+
+      & > p {
+        font-size: 2.2rem;
+        font-weight: var(--fw-semibold);
+        font-style: italic;
+        letter-spacing: 0.5px;
+        line-height: 3.5rem;
+        text-transform: uppercase;
+        color: var(--secondary-t90);
+      }
+    }
+  }
+}

@@ -152,12 +152,12 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/locations"
+                    to="/the-vaults"
                     onClick={() =>
                       window.scrollTo({ top: 0, behavior: "smooth" })
                     }
                   >
-                    Locations
+                    The Vaults
                   </NavLink>
                 </li>
               </ul>
@@ -201,8 +201,8 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/locations" onClick={handleClose}>
-                    Locations
+                  <NavLink to="/the-vaults" onClick={handleClose}>
+                    The Vaults
                   </NavLink>
                 </li>
               </ul>
