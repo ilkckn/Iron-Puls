@@ -28,7 +28,7 @@ const Landing = () => {
             </p>
           </div>
           <div className="btns">
-            <button onClick={() => navigate("/about")}>start training</button>
+            <button>start training</button>
             <button>view plans</button>
           </div>
         </div>
